@@ -1,6 +1,6 @@
 # Customer Service Chatkit Demo
 
-Demo of a full customer service chat application built with Chatkit and React. Tutorial:
+Demo of a full customer service chat application built with Chatkit and React. Tutorial:https://pusher.com/tutorials/customer-service-chat-react
 
 ## Getting Started
 
