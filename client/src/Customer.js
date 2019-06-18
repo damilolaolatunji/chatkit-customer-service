@@ -13,6 +13,7 @@ class Customer extends Component {
     this.state = {
       currentUser: null,
       currentRoom: null,
+      currentRoomId: null,
       newMessage: "",
       messages: [],
       isLoading: false,
