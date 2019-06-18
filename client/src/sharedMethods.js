@@ -24,16 +24,21 @@ function sendMessage(event) {
 
 function connectToRoom(id) {
   const { currentUser } = this.state;
-
+  this.setState({
+    currentRoomId: id
+  });
   return currentUser
     .subscribeToRoom({
       roomId: `${id}`,
       messageLimit: 100,
       hooks: {
         onMessage: message => {
-          this.setState({
-            messages: [...this.state.messages, message]
-          });
+          const {currentRoomId} = this.state
+          if (message.roomId === currentRoomId){
+            this.setState({
+              messages: [...this.state.messages, message]
+            });
+          }
         }
       }
     })
